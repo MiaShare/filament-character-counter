@@ -66,7 +66,8 @@ class FilamentCharacterCounterServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-character-counter-styles', __DIR__ . '/../resources/dist/filament-character-counter.css'),
+            Css::make('filament-character-counter-styles', __DIR__ . '/../resources/dist/filament-character-counter.css')
+                ->loadedOnRequest(),
         ];
     }
 }
